@@ -1,0 +1,14 @@
+megs:32
+
+romimage:file=$BXSHARE/BIOS-bochs-latest
+vgaromimage:file=$BXSHARE/VGABIOS-lgpl-latest
+
+floppya:1_44="D:\toyos\day06\HELLO-OS.img",status=inserted
+
+boot:floppy
+
+log:bochsout.txt
+
+mouse:enabled=1
+
+keyboard: user_shortcut=ctrl-f1,type=mf, serial_delay=250,keymap="C:\Program Files\Bochs-2.6.11\keymaps\x11-pc-de.map"

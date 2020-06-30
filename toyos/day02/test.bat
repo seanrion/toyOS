@@ -1,0 +1,1 @@
+nasm test.asm -o test.img

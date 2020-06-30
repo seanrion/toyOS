@@ -1,0 +1,11 @@
+INC = ../../win32
+API = ../apilib
+APIH= ../
+.PHONY:all
+all:$(APP)
+%.exe:%.o
+	gcc -nostdinc -nostdlib -e _HariMain -o $@ $^  -T linker.script -I$(INC) -I$(APIH) -L$(INC) -l:golibc.lib  -L$(API) -l:apilib.lib
+%.o:%.c
+	gcc -nostdinc -nostdlib -c $^ -I$(INC) -I$(APIH) -L$(API) -l:apilib.lib -L$(INC) -l:golibc.lib  -L$(API) -l:apilib.lib
+%.o:%.asm
+	nasm -f win32 $^

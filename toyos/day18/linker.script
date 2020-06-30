@@ -1,0 +1,23 @@
+SECTIONS
+{
+        . = 0x280000;
+		. = ALIGN(4);
+        .text : {
+              *(.text)
+        }
+		.rdata : {
+              *(.rdata)
+        }
+        .data : {
+              *(.data)
+        }
+		.idata : {
+              *(.idata)
+        }
+		.bss : {
+			  *(.bss)	
+		}
+		.eh_frame : {
+              *(.eh_frame)
+        }
+}

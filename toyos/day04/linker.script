@@ -1,0 +1,15 @@
+SECTIONS
+{
+        . = 0x280000;
+		. = ALIGN(4);
+        .text : {
+              *(.text)
+        }
+
+        .data : {
+              *(.data)
+        }
+		.eh_frame : {
+              *(.eh_frame)
+        }
+}
